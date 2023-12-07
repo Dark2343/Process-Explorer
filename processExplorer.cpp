@@ -1,5 +1,3 @@
-// Implement the KillTask function and make sure it works
-
 #include "processExplorer.h"
 
 int main(){
