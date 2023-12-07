@@ -230,16 +230,8 @@ public:
         else  {file.close();}
     }
 
-    void killTask(Process data[], int size, string name){
-        for (int i = 0; i < size; i++)
-        {
-            if (data[i].getTask() == name)
-            {
-                string command = "taskkill/im " + data->getTask() + " /F";
-                system(command);
-            }
-            
-        }
+    void killTask(string ID){
+        string command = "taskkill /F /PID " + ID;
+        system(command.c_str());
     }
-
 };
